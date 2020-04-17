@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
@@ -43,13 +44,14 @@ public class FileOperator {
 	}
 	
 	
-	public void execute(String filePath) {
+	public void execute(String filePath) throws IOException {
 		preFileData(filePath);
 		generateModifyInfo();
 		writeModifyInfos();
 	}
 	
-	public void preFileData(String filePath) {
+	public void preFileData(String filePath) throws IOException {
+		checkFilePath(filePath, Boolean.FALSE);
 		File[] files = getFiles(filePath);
 		logger.info("---- 读取文件开始 ------");
 		for(File sqlFile:files) {
@@ -61,6 +63,17 @@ public class FileOperator {
 		}
 	}
 	
+	private void checkFilePath(String filePath, Boolean createFilePath) throws IOException {
+		File file = new File(filePath);
+		if(!file.exists() && !createFilePath) {
+			throw new IOException("文件目录【"+filePath+"】不存在");
+		}
+		if(!file.exists()) {
+			file.mkdirs();
+		}
+	}
+
+
 	public void generateModifyInfo() {
 		logger.info("---- 生成修改信息开始 ------");
 		dataHolder.generateModifyInfo();
@@ -70,7 +83,7 @@ public class FileOperator {
 		}
 	}
 	
-	public void writeModifyInfos() {
+	public void writeModifyInfos() throws IOException {
 		logger.info("---- 写入修改信息开始 ------");
 		Map<String, Map<String, List<ModifyInfos>>> allModifyInfos = dataHolder.getAllModifyInfos();
 		Iterator<Entry<String, Map<String, List<ModifyInfos>>>> iterator = allModifyInfos.entrySet().iterator();
@@ -89,7 +102,8 @@ public class FileOperator {
 		logger.info("---- 写入修改信息结束 ------");
 	}
 	
-	private void writeResultFile(String environment,String business,List<ModifyInfos> modifyInfos) {
+	private void writeResultFile(String environment,String business,List<ModifyInfos> modifyInfos) throws IOException {
+		checkFilePath(filePath, Boolean.TRUE);
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
 		String formatstr = sdf.format(new Date());
 		String fileName = business+"-"+environment+formatstr+".sql";

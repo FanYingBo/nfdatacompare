@@ -1,0 +1,38 @@
+2020-04-17 16:44:48 下午 [Thread: main] com.db.data.file.FileOperator.preFileData(FileOperator.java:56) 
+INFO:---- 读取文件开始 ------
+2020-04-17 16:44:49 下午 [Thread: main] com.db.data.file.FileOperator.preFileData(FileOperator.java:60) 
+INFO:---- 读取文件结束 ------
+2020-04-17 16:44:49 下午 [Thread: main] com.db.data.file.FileOperator.generateModifyInfo(FileOperator.java:78) 
+INFO:---- 生成修改信息开始 ------
+2020-04-17 16:44:49 下午 [Thread: main] com.db.data.cache.TableDataHolder.compareColumnValue(TableDataHolder.java:571) 
+INFO:not compare table data tables:[`report_user_distribution`]
+2020-04-17 16:44:49 下午 [Thread: main] com.db.data.cache.TableDataHolder.compareColumnValue(TableDataHolder.java:571) 
+INFO:not compare table data tables:[]
+2020-04-17 16:44:49 下午 [Thread: main] com.db.data.cache.TableDataHolder.compareColumnValue(TableDataHolder.java:571) 
+INFO:not compare table data tables:[]
+2020-04-17 16:44:49 下午 [Thread: main] com.db.data.cache.TableDataHolder.compareColumnValue(TableDataHolder.java:571) 
+INFO:not compare table data tables:[]
+2020-04-17 16:44:49 下午 [Thread: main] com.db.data.file.FileOperator.generateModifyInfo(FileOperator.java:80) 
+INFO:---- 生成修改信息结束 ------
+2020-04-17 16:44:49 下午 [Thread: main] com.db.data.file.FileOperator.writeModifyInfos(FileOperator.java:87) 
+INFO:---- 写入修改信息开始 ------
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.file.FileOperator.preFileData(FileOperator.java:56) 
+INFO:---- 读取文件开始 ------
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.file.FileOperator.preFileData(FileOperator.java:60) 
+INFO:---- 读取文件结束 ------
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.file.FileOperator.generateModifyInfo(FileOperator.java:78) 
+INFO:---- 生成修改信息开始 ------
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.cache.TableDataHolder.compareColumnValue(TableDataHolder.java:571) 
+INFO:not compare table data tables:[`report_user_distribution`]
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.cache.TableDataHolder.compareColumnValue(TableDataHolder.java:571) 
+INFO:not compare table data tables:[]
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.cache.TableDataHolder.compareColumnValue(TableDataHolder.java:571) 
+INFO:not compare table data tables:[]
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.cache.TableDataHolder.compareColumnValue(TableDataHolder.java:571) 
+INFO:not compare table data tables:[]
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.file.FileOperator.generateModifyInfo(FileOperator.java:80) 
+INFO:---- 生成修改信息结束 ------
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.file.FileOperator.writeModifyInfos(FileOperator.java:87) 
+INFO:---- 写入修改信息开始 ------
+2020-04-17 16:45:22 下午 [Thread: main] com.db.data.file.FileOperator.writeModifyInfos(FileOperator.java:102) 
+INFO:---- 写入修改信息结束 ------
